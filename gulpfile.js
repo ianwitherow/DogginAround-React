@@ -3,8 +3,8 @@ watch = require('gulp-watch'),
 babel = require('gulp-babel');
 
 gulp.task('compile', function() {
-	gulp.src('components/*.js')
-	.pipe(watch('components/*.js'))
+	gulp.src('components/*.jsx')
+	.pipe(watch('components/*.jsx'))
 	.pipe(babel())
 	.pipe(gulp.dest('build'));
 });
