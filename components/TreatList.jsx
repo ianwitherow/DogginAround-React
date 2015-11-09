@@ -1,5 +1,8 @@
-var TreatList = React.createClass({
-	render: function() {
+import React from 'react';
+import Treat from './Treat.jsx';
+
+export default class TreatList extends React.Component {
+	render() {
 		var that = this;
 		var treats = this.props.data.map(function(treat) {
 			var isSelected = (that.props.selectedTreat && that.props.selectedTreat.name === treat.name);
@@ -17,4 +20,4 @@ var TreatList = React.createClass({
 			</div>
 		);
 	}
-});
+};

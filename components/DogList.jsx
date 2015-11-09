@@ -1,5 +1,8 @@
-var DogList = React.createClass({
-	render: function() {
+import React from 'react';
+import Dog from './Dog.jsx';
+
+export default class DogList extends React.Component {
+	render() {
 		var that = this;
 		var dogs = this.props.data.map(function(dog) {
 			return (
@@ -19,5 +22,5 @@ var DogList = React.createClass({
 			</div>
 		);
 	}
-});
+};
 

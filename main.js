@@ -1,3 +1,8 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import Game from './components/Game.jsx';
+
 
 var treats = [
 	{
@@ -43,6 +48,16 @@ var dogs = [
 	},
 ]
 
+/*
+* Hierarchy
+* =========
+*	-Game
+*		-TreatList
+*			-Treat
+*		-DogList
+*			-Dog
+*/
+
 ReactDOM.render(
 	<div id="page">
 		<h1>
@@ -52,3 +67,4 @@ ReactDOM.render(
 	</div>,
 	document.getElementById('app')
 );
+

@@ -1,8 +1,14 @@
-var Treat = React.createClass({
-	handleClick: function() {
+import React from 'react';
+
+export default class Treat extends React.Component {
+	constructor() {
+		super();
+		this.handleClick = this.handleClick.bind(this);
+	}
+	handleClick() {
 		this.props.onTreatSelected(this.props.treat);
-	},
-	render: function() {
+	}
+	render() {
 		var className = "treat";
 		if (this.props.isSelected) {
 			className += " selected"
@@ -17,4 +23,4 @@ var Treat = React.createClass({
 			</div>
 		);
 	}
-});
+};
